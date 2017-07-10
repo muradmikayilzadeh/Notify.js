@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Notify.js</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/notify.css">
+
+	<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+
+	<script src="notify.js"></script>
+</head>
+<body>
+	
+	<div class="container">
+		
+		<h1><b>Notify.js</b></h1>
+
+		<div class="panel panel-default col-md-12">
+			
+			<div class="col-md-4">
+				
+				<br>
+				<input type="text" id="id" placeholder="Id" class="form-control">
+				<br>
+				<input type="text" id="title" placeholder="Title" class="form-control">
+				<br>
+				<textarea id="content" placeholder="Content..." class="form-control" cols="30" rows="10"></textarea>
+				<br>
+				<input type="text" id="href" placeholder="Href" class="form-control">
+				<br>
+				<input type="checkbox" id="closeButton">
+				<label for="closeButton">Close Button</label>
+
+
+			</div>
+
+			<div class="col-md-4">
+				
+				<br>
+				<input type="number" id="width" placeholder="Width" class="form-control">
+				<br>
+				<input type="number" id="height" placeholder="Height" class="form-control">
+				<br>
+				<input type="color" id="bgColor">
+				<label for="bgColor">Bacgkround Color</label>
+				<br>
+				<input type="color" id="fontColor">
+				<label for="fontColor">Font Color</label>
+				<br>
+				<input type="color" id="titleColor">
+				<label for="titleColor">Title Color</label>
+				<br><br>
+				<input type="number" id="fontSize" placeholder="Font Size" class="form-control">
+				<br>
+				<input type="text" id="font" placeholder="Font Family" class="form-control">
+				<br>
+				<input type="text" id="boxShadow" placeholder="Box shadow" class="form-control">
+
+			</div>
+
+			<div class="col-md-4">
+				
+				<h3><b>Set Position</b></h3>
+				<br>
+				<input type="radio" id="top-left">
+				<label for="top-left">Top-left</label>
+
+				<br>
+				<input type="radio" id="top-right">
+				<label for="top-right">Top-right</label>
+
+				<br>
+				<input type="radio" id="bottom-left">
+				<label for="bottom-left">Bottom-left</label>
+
+				<br>
+				<input type="radio" id="bottom-right">
+				<label for="bottom-right">Bottom-right</label>
+
+
+				<br>
+
+				<h3><b>Enter your position</b></h3>
+				<br>
+				<input type="number" id="coordinats" placeholder="Example: [10,20,30,40]--->Clockwise direction" class="form-control">
+				
+				<h3><b>Image Settings</b></h3>
+
+				<br>
+
+				<input type="file" class="form-control" id="picture">
+
+				<br>
+
+				<input type="number" class="form-control" id="widthPic" placeholder="Width Picture">
+
+				<br>
+
+				<input type="number" class="form-control" id="heightPic" placeholder="Height Picture">
+
+				<br>
+
+			</div>
+
+			<button id="finish" class="btn btn-success">Create notification</button>
+
+			<br><br>
+
+		</div>
+
+		
+		<div class="panel panel-default col-md-12">
+			
+
+		</div>
+
+		<script>
+			
+			$(document).ready(function($) {
+				
+				$('#finish').click(function(event) {
+					
+					var notify = new Notify($('#id').val(),$('#width').val(),$('#height').val(),$('#href').val());
+
+				});
+
+			});
+
+		</script>
+
+	</div>
+
+</body>
+</html>

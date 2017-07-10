@@ -1,0 +1,38 @@
+
+#notify{
+	transition: all .4s ease;
+}
+
+.img,.heading,.body{
+	display: flex;
+}	
+	
+	.heading h3{
+		margin:0;
+		padding: 0;
+ 	}
+
+.heading{
+	margin-top: 5px;
+}
+
+.img{	
+	background:white;	
+	height: 0;
+	display: inline-block;
+	float: left;	
+}
+	
+a{
+	text-decoration: none;	
+	color:white;
+}
+
+#close{
+	float: right;
+	padding:5px;
+	display: none;
+	cursor: pointer;
+	z-index: 999999;
+}
+
